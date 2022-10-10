@@ -31,12 +31,12 @@
    send_to="12"
    sequence="100"
   >
-  <send>Send("home")
+  <send>Send("home") -- change this to wherever home is
 EnableTrigger("quitCheck", false)
 EnableTrigger("quitEnd", false)
 Send("keyring get all")
 for _,v in ipairs(quitTable) do
-    Send("put " .. v .. " container")
+    Send("put " .. v .. " container") --change container to your bag
 end
 
 Send("keyring put all")
@@ -75,14 +75,3 @@ Send("echo {/quit}")
   </alias>
 </aliases>
 
-<!--  Timers  -->
-
-<timers>
-  <timer enabled="y" second="30.00" offset_second="0.00"    send_to="12"
->
-  <send>if GetInfo (111) then Save () end</send>
-
-  </timer>
-</timers>
-
-</muclient>
