@@ -18,13 +18,11 @@
 
 		<description trim="y">
 			<![CDATA[  
-   Pmage made into plugin - - Fiendish and unnamed others code
-   Plugin - disconnect and Reconnects if no ticks seen in 120 seconds - thanks Fiendish and co
+   Pmage made into plugin - - chatgpt & Fiendish and unnamed others code
+   Plugin - disconnect and Reconnects if no ticks seen in 120 seconds - thanks Fiendish and chatgpt
 	]]>
 		</description>
 	</plugin>
-
-
 
 	<script>
 		<!--REQUIRES -->
@@ -64,7 +62,8 @@
 	  -- check if the elapsed time is greater than 120 seconds
 	  if elapsed_time > 120 then
 		-- reconnect to the game
-		Reconnect()
+		Disconnect()
+		Connect()
 	
 		-- reset the elapsed time and the last tick time
 		elapsed_time = 0
