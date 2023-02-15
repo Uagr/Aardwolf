@@ -58,20 +58,43 @@ Send("quit check")
 <!--  Aliases  -->
 
 <aliases>
+	<!-- Quit Check-->
   <alias
-   match="^quitchk$"
-   enabled="y"
-   group="QuitCheck"
-   regexp="y"
-   send_to="12"
-   sequence="100"
-  >
-  <send>quitTable = {}
-EnableTrigger("quitCheck")
-EnableTrigger("quitEnd")
-Send("quit check")
-Send("echo {/quit}")
-</send>
+	   match="^quitchk$"
+	   enabled="y"
+	   group="QuitCheck"
+	   regexp="y"
+	   send_to="12"
+	   sequence="100"
+	  >
+	  <send>
+		  quitTable = {}
+		  EnableTrigger("quitCheck")
+		  EnableTrigger("quitEnd")
+		  Send("invmon on")
+		  Send("quit check")
+		  Send("echo {/quit}")
+	  </send>
   </alias>
+   <alias
+		name="quitcheck"
+		match="qc"
+		enabled="y"
+		group="script"
+		send_to="12"
+		sequence="100"
+>
+		<send>
+			quitcheckTable = {}&#9;-- creates table
+			Send("keyring get all")
+			Execute ("Quit check")
+			Execute ("invmon on")
+			for _,v in ipairs(quitcheckTable)
+			  do Send("put " .. v .. " container")
+			end
+			Send("keyring put all")
+		</send>
+	</alias>
+
 </aliases>
 
