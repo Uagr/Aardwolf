@@ -153,7 +153,7 @@ some fun alias's you can use.
    group="pk"
    sequence="100"
   >
-  <send>sa @R**PK**@W FLEE= @RRetreat home LIVE!
+  <send>gt @R**PK**@W FLEE= @RRetreat home LIVE!
 </send>
   </alias>
 
@@ -164,7 +164,7 @@ some fun alias's you can use.
    group="pk"
    sequence="100"
   >
-  <send>sa @R**PK**@W WHO Wants to @RPK? @W(Y/N)</send>
+  <send>gt @R**PK**@W WHO Wants to @RPK? @W(Y/N)</send>
   </alias>
 
   <alias
@@ -174,7 +174,7 @@ some fun alias's you can use.
    group="pk"
    sequence="100"
   >
-  <send>sa @R**PK**@W COME TO = @R%1</send>
+  <send>gt @R**PK**@W COME TO = @R%1</send>
   </alias>
 
   <alias
